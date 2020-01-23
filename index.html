@@ -7,15 +7,38 @@
         <title>The Clouds Playschool</title>
 
         <!-- Stylesheets -->
-        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.8.0/css/bulma.min.css">
-        <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
-        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma-divider@0.2.0/dist/css/bulma-divider.min.css">
-        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma-carousel@4.0.4/dist/css/bulma-carousel.min.css">
+        <link rel="stylesheet" href="./Static/bulma.min.css">
+        <link rel="stylesheet" href="./Static/font-awesome.min.css" >
+        <link rel="stylesheet" href="./Static/bulma-divider.min.css">
+        <link rel="stylesheet" href="./Static/bulma-carousel.min.css">
+        <link rel="stylesheet" href="./Static/poppins.css" >
+        <link rel="stylesheet" href="./Static/bulma-timeline.min.css">
+        <script src="./Static/scrollreveal.min.js"></script>
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
 
         <style>
             nav.navbar {
                 height: 6rem !important;
-                box-shadow: 0 1px 3px 0 rgba(0, 0, 0, .1), 0 1px 2px 0 rgba(0, 0, 0, .06) !important;
+                box-shadow: 0 1px 3
+                px 0 rgba(0, 0, 0, .1), 0 1px 2px 0 rgba(0, 0, 0, .06) !important;
+            }
+
+            /* Grow */
+            .hvr-grow {
+                display: inline-block;
+                vertical-align: middle;
+                transform: translateZ(0);
+                /* box-shadow: 0 0 1px rgba(0, 0, 0, 0); */
+                backface-visibility: hidden;
+                -moz-osx-font-smoothing: grayscale;
+                transition-duration: 0.3s;
+                transition-property: transform;
+            }
+
+            .hvr-grow:hover,
+            .hvr-grow:focus,
+            .hvr-grow:active {
+                transform: scale(1.1);
             }
         </style>
     </head>
@@ -24,17 +47,27 @@
         <!-- Navbar -->
         <nav class="navbar">
             <div class="container">
-                <div class="navbar-brand">
+                <div class="navbar-brand is-vcentered">
                     <figure class="image is-96x96">
                         <a href="index.html">
                             <img src="./Resources/logo.jpg" alt="Logo">
                         </a>
                     </figure>
+                    <div class="columns is-flex is-vcentered"> 
+                        <div class="column is-two-thirds-mobile is-half-tablet">
+                            <a href="index.html">
+                                <img style="max-width: 50vh; max-height: 5vw;" class="is-flex is-vcentered"  src="./Resources/name.png" alt="Logo">
+                            </a>
+                        </div>
+                    </div>
+                    <!-- <h1 class="is-vcentered has-text-weight-semibold" style="font-family: 'Poppins', sans-serif;">The Clouds Playschool</h1> -->
                 </div>
                 <div class="navbar-menu" id="navbarMenu">
                     <div class="navbar-end">
-                        <a href="index.html" class="navbar-item is-active is-size-5 has-text-weight-semibold">
-                            Home
+                        <a class="navbar-item is-vcentered" href="index.html">
+                            <button class="button is-size-5 is-info is-light">
+                                    Home
+                            </button>
                         </a>
                         <a href="about.html" class="navbar-item is-active is-size-5 has-text-weight-semibold">
                             About
@@ -55,8 +88,7 @@
 
         <!-- Carousel -->
         <div class="container">
-            <!-- Start Carousel -->
-            <div id="carousel" class="carousel" data-autoplay="true" data-loop="true" data-size=>
+            <div id="carousel" class="carousel is-full" data-autoplay="true" data-loop="true">
                 <div class="item-1">
                     <figure class="image is-3by2">
                         <img src="./Resources/image-1.jpg" alt="">
@@ -90,16 +122,152 @@
             </div>
         </div>
 
-        <!-- Content -->
+        <!-- Introduction -->
         <section class="section">
-            <div class="columns">
-                <div class="column is-8 is-offset-2">
-                    <div class="content is-medium">
-                        <h2 class="subtitle is-4">December 25, 2018</h2>
-                        <h1 class="title">Getting Started</h1>
-                        <p>This is a starter template for creating a beautiful, customizable blog with minimal
-                            effort. You’ll only have to change a few settings and you’re ready to go. As with all Jigsaw sites,
-                            configuration settings can be found in config</p>
+            <div class="container">
+                <div class="columns is-desktop is-vcentered">
+                    <div class="column">
+                        <div class="container is-vcentered">
+                            <div class="columns">
+                                <div class="column is-vcentered">
+                                    <p class="title has-text-centered is-size-3 has-text-weight-semibold" style="font-family: 'Poppins', sans-serif;">
+                                        A Foundation for the Future
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="columns">
+                                <div class="column is-vcentered">
+                                    <p class="subtitle has-text-centered is-size-5 has-text-weight-light" style="font-family: 'Poppins', sans-serif;">
+                                        <span class="has-text-info	">The Clouds Playschool</span> gives your child the ideal environment for learning and growing.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="column">
+                        <figure class="image is-3by2">
+                            <img src="./Resources/kids-1.png" alt="">
+                        </figure>
+                    </div>
+                </div><br>
+                <div class="columns is-desktop is-vcentered">
+                    <div class="column">
+                        <figure class="image is-2by1">
+                            <img src="./Resources/kids-2.png" alt="">
+                        </figure>
+                    </div>
+                    <div class="column">
+                        <div class="container is-vcentered">
+                            <div class="columns">
+                                <div class="column is-vcentered">
+                                    <p class="title has-text-centered is-size-3 has-text-weight-semibold" style="font-family: 'Poppins', sans-serif;">
+                                        Learn through Fun
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="columns">
+                                <div class="column is-vcentered">
+                                    <p class="subtitle has-text-centered is-size-5 has-text-weight-light" style="font-family: 'Poppins', sans-serif;">
+                                        Our pedagogy focuses on your child, from learning to being creative and having fun!
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <div class="is-divider"></div><br>
+
+
+        <!-- Track -->
+        <section class="section">
+            <p class="title has-text-centered is-size-3 has-text-weight-semibold" style="font-family: 'Poppins', sans-serif;">
+                We make sure your child is well taken cared of
+            </p><br>
+            <div class="timeline is-centered">
+                <!-- <header class="timeline-header">
+                    <span class="tag is-medium is-info">Timeline</span>
+                </header> -->
+                <div class="timeline-item is-primary">
+                    <div class="timeline-marker is-primary is-image is-32x32"></div>
+                    <div class="timeline-content">
+                        <figure class="image is-128x128">
+                            <img src="./Resources/clipart-3.jpg">
+                        </figure>
+                        <p class="subtitle has-text-centered has-text-weight-semibold">Playgroup</p>
+                        <p class="heading has-text-centered">1.5 - 2.5 Years Old</p>
+                    </div>
+                </div>
+                <div class="timeline-item is-warning">
+                    <div class="timeline-marker is-warning is-image is-32x32"></div>
+                    <div class="timeline-content">
+                        <figure class="image is-128x128">
+                            <img src="./Resources/clipart-1.png">
+                        </figure>
+                        <p class="subtitle has-text-centered has-text-weight-semibold">Nursery</p>
+                        <p class="heading has-text-centered">2.5 - 3.5 Years Old</p>
+                    </div>
+                </div>
+                <div class="timeline-item is-danger">
+                    <!-- <i class="fa fa-flag"></i> -->
+                    <div class="timeline-marker is-danger is-image is-32x32"></div>
+                    <div class="timeline-content">
+                        <figure class="image is-128x128">
+                            <img src="./Resources/clipart-4.png">
+                        </figure>
+                        <p class="subtitle has-text-centered has-text-weight-semibold">Kindergarten</p>
+                        <p class="heading has-text-centered">3.5 - 5.5 Years Old</p>
+                    </div>
+                </div>
+            </div>
+            <div class="is-divider"></div><br>
+        </section>
+
+
+        <!-- Ammenities -->
+        <section class="section">
+            <div class="container">
+                <div class="columns is-desktop is-centered">
+                    <div class="column">
+                        <div class="content is-medium">
+                            <!-- <h2 class="subtitle is-4">December 25, 2018</h2> -->
+                            <h1 class="title">We're Resourceful</h1>
+                            <p> We make sure that your child is well taken care of, and is learning by creating throughout his tenure. Our teachers make sure to focus on every individual child to develop their personality and creativity. </p>
+                            <p> With a standalone space, we provide plenty of playful activities for your child to have fun and socialize with other kids.</p>
+                        </div>
+                    </div>
+                    <div class="column"><br><br>
+                        <div class="columns is-desktop is-centered">
+                            <div class="column is-one-third"></div>
+                            <div class="column">
+                                <ul>
+                                    <li><i class="fa fa-graduation-cap fa-2x"></i><p class="is-size-5 is-inline">&nbsp;&nbsp;Qualified Teachers & Professionals</p></li><br>
+                                    <li><i class="fa fa-heart fa-2x"></i><p class="is-size-5 is-inline">&nbsp;&nbsp;&nbsp;Loving Environment</p></li><br>
+                                    <li><i class="fa fa-camera-retro fa-2x"></i><p class="is-size-5 is-inline">&nbsp;&nbsp;&nbsp;CCTV Enabled Premises</p></li><br>
+                                    <li><i class="fa fa-dropbox fa-2x"></i><p class="is-size-5 is-inline">&nbsp;&nbsp;&nbsp;Stationary Included</p></li>
+                                </ul>   
+                            </div>
+                            <!-- <div class="column"></div> -->
+                        </div>
+                    </div>
+                </div>
+            </div><br><br><br>  
+            <div class="container">
+                <div class="columns is-desktop is-centered">
+                    <div class="column has-text-centered">
+                        <figure class="image">
+                            <img src="./Resources/chipart-5.png">
+                        </figure>
+                    </div>
+                    <div class="column">    
+                        <div class="content is-medium">
+                            <!-- <h2 class="subtitle is-4">December 25, 2018</h2> -->
+                            <h1 class="title">We Care</h1>
+                            <p> We make sure that your child is well taken care of, and is learning by creating throughout his tenure. Our teachers make sure to focus on every individual child to develop their personality and creativity. </p>
+                            <p> With a standalone space, we provide plenty of playful activities for your child to have fun and socialize with other kids.</p>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -107,20 +275,76 @@
 
         <div class="is-divider"></div>
 
+
+        <!-- Our Kids -->
         <section class="section">
-            <div class="columns">
-                <div class="column is-8 is-offset-2">
-                    <div class="content is-medium">
-                        <h2 class="subtitle is-4">December 25, 2018</h2>
-                        <h1 class="title">Getting Started</h1>
-                        <p>This is a starter template for creating a beautiful, customizable blog with minimal
-                            effort. You’ll only have to change a few settings and you’re ready to go. As with all Jigsaw sites,
-                            configuration settings can be found in config</p>
+            <div class="container">
+                <div class="columns">
+                    <div class="column">
+                        <div class="card hvr-grow">
+                            <div class="card-image">
+                            <figure class="image is-1by1">
+                                <img src="./Resources/image-8.jpg">
+                            </figure>
+                            </div>
+                            <div class="card-content">
+                                <div class="media">
+                                    <div class="media-content has-text-centered">
+                                        <p class="title is-4">Ritika</p>
+                                        <p class="subtitle is-6">Playgroup</p>
+                                    </div>
+                                </div>
+                                <div class="content">
+                                    Ritika sometimes need a little help with the sand, and we're more than happy to help!
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="column">
+                        <div class="card hvr-grow">
+                            <div class="card-image">
+                            <figure class="image is-1by1">
+                                <img src="./Resources/image-9.png">
+                            </figure>
+                            </div>
+                            <div class="card-content">
+                                <div class="media">
+                                    <div class="media-content has-text-centered">
+                                        <p class="title is-4">Rohan</p>
+                                        <p class="subtitle is-6">Nursery</p>
+                                    </div>
+                                </div>
+                                <div class="content">
+                                    Rohan loves the color red, He definitely didn't got paint on the walls!
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="column">
+                        <div class="card hvr-grow">
+                            <div class="card-image">
+                            <figure class="image is-1by1">
+                                <img src="./Resources/image-7.jpg">
+                            </figure>
+                            </div>
+                            <div class="card-content">
+                                <div class="media">
+                                    <div class="media-content has-text-centered">
+                                        <p class="title is-4">Ashish</p>
+                                        <p class="subtitle is-6">Kindergartener</p>
+                                    </div>
+                                </div>
+                                <div class="content">
+                                    Ashish loved the Sand-Pit Activit, He can't get enough of playing with his friend!
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
         </section>
 
+        
 
         <!-- Newsletter -->
         <section class="section">
@@ -150,61 +374,30 @@
         </section>
 
         <!-- Articles -->
-        <section class="hero ">
-            <div class="hero-body">
-                <div class="container">
-
-                <section class="section">
-                    <div class="columns is-variable is-8">
-                    <div class="column is-5 is-offset-1 ">
+        <section class="section">
+            <div class="container">
+                <div class="columns is-desktop is-centered">
+                    <div class="column">    
                         <div class="content is-medium">
-                        <h2 class="subtitle is-5 has-text-grey">December 23, 2018</h2>
-                        <h1 class="title has-text-black is-3">Custom 404 Pages</h1>
-                        <p class="has-text-dark">This starter template includes a custom 404 Not Found error page, located at
-                            /source/404.blade.php.
-                            To preview the 404 page, you can visit /404 in your browser. Depending...</p>
+                            <!-- <h2 class="subtitle is-4">December 25, 2018</h2> -->
+                            <h1 class="title">Ready To Hop On-board?</h1>
+                            <p> We cannot wait for your child to join our nurturing environment, and make our school more vibrant. We're always open to admissions and any admission
+                                related inquiry can directly be addressed by visiting our site or contacting us at your convenience during school hours.</p>
+                        </div><br>
+                        <div class="columns is-desktop is-centered">
+                            <div class="column"></div>
+                            <div class="column">
+                                <!-- <button class="button is-warning"></button> -->
+                                <a href="contact.html"><button class="button is-success is-outlined">Contact Now!</button></a>
+                            </div>
+                            <div class="column"></div>
                         </div>
                     </div>
-                    <div class="column is-5">
-                        <div class="content is-medium">
-                        <h2 class="subtitle is-5 has-text-grey">December 25, 2018</h2>
-                        <h1 class="title has-text-black is-3">Fuse Search</h1>
-                        <p class="has-text-dark">To provide fast, local search of your blog, this starter template comes with a
-                            pre-built Vue.js
-                            component that uses Fuse.js. Fuse.js is a "lightweight fuzzy-search library with no...</p>
-                        </div>
+                    <div class="column has-text-centered">
+                        <figure class="image">
+                            <img src="./Resources/chipart-5.png">
+                        </figure>
                     </div>
-                    </div>
-                </section>
-
-                <div class="is-divider"></div>
-
-                <section class="section">
-                    <div class="columns is-variable is-8">
-                    <div class="column is-5 is-offset-1">
-                        <div class="content is-medium">
-                        <h2 class="subtitle is-5 has-text-grey">December 25, 2018</h2>
-                        <h1 class="title has-text-black is-3">Getting Started</h1>
-                        <p class="has-text-dark">This is a starter template for creating a beautiful, customizable blog with
-                            minimal
-                            effort. You’ll only have to change a few settings and you’re ready to go. As with all Jigsaw sites,
-                            configuration settings can be found in config</p>
-                        </div>
-                    </div>
-                    <div class="column is-5">
-                        <div class="content is-medium">
-                        <h2 class="subtitle is-5 has-text-grey">December 25, 2018</h2>
-                        <h1 class="title has-text-black is-3">Getting Started</h1>
-                        <p class="has-text-dark">This is a starter template for creating a beautiful, customizable blog with
-                            minimal
-                            effort. You’ll only have to change a few settings and you’re ready to go. As with all Jigsaw sites,
-                            configuration settings can be found in config</p>
-                        </div>
-                    </div>
-                    </div>
-                </section>
-
-
                 </div>
             </div>
         </section>
@@ -221,11 +414,16 @@
         </footer>
 
         <!-- Scripts -->
-        <script src="https://cdn.jsdelivr.net/npm/bulma-carousel@4.0.4/dist/js/bulma-carousel.min.js"></script>
+        <script src="./Static/bulma-carousel.min.js"></script>
         <script>
             bulmaCarousel.attach('#carousel', {
                 slidesToScroll: 1,
                 slidesToShow: 4
+            });
+
+            $(document).ready(function(){
+                var carousels = bulmaCarousel.attach(); // carousels now contains an array of all Carousel instances
+                // ScrollReveal().reveal('.section')
             });
             </script>
     </body>
