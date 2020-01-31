@@ -1,10 +1,10 @@
-<!DOCTYPE html>
+<!DOCTYPE html PUBLIC>
 <html lang="en">
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta http-equiv="X-UA-Compatible" content="ie=edge">
-        <title>The Clouds Playschool</title>
+        <title>The Clouds Playschool - Your child's second home</title>
 
         <!-- Stylesheets -->
         <link rel="stylesheet" href="./Static/bulma.min.css">
@@ -13,8 +13,9 @@
         <link rel="stylesheet" href="./Static/bulma-carousel.min.css">
         <link rel="stylesheet" href="./Static/poppins.css" >
         <link rel="stylesheet" href="./Static/bulma-timeline.min.css">
-        <script src="./Static/scrollreveal.min.js"></script>
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+        <script src="./Static/scrollreveal.min.js"></script>
 
         <style>
             nav.navbar {
@@ -40,34 +41,79 @@
             .hvr-grow:active {
                 transform: scale(1.1);
             }
+
+            .icon {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+
+            .bg-img { 
+                /* background-image: url("./Resources/67037.jpg") ; */
+                background-position: center center;
+                background-repeat:  no-repeat;
+                /* background-attachment: fixed; */
+                background-size:  cover;
+                background-color:rgba(0, 0, 0, .1)
+            }
+
+            .nav-img {
+                background-image: url("./Resources/confetti.jpg") ;
+                background-attachment: fixed;
+            }
+
+            .img-1 {
+                background-image: url("./Resources/confetti.jpg") ;
+                background-attachment: fixed;
+            }
+
+            .img-2 {
+                background-image: url("./Resources/blocks-1.jpg") ;
+            }
+            .img-3 {
+                background-image: url("./Resources/blocks-2.jpg") ;
+            }
+
+            .carousel {
+                height: 70vh;
+            }
+
+            .carousel-item {
+                height: 70vh;
+            }
+            
+            .footer {
+                height: 30vh;
+            }
         </style>
     </head>
 
-    <body>
+    <body class="has-navbar-fixed-top">
         <!-- Navbar -->
-        <nav class="navbar">
+        <nav class="navbar is-fixed-top bg-img nav-img">
             <div class="container">
-                <div class="navbar-brand is-vcentered">
-                    <figure class="image is-96x96">
-                        <a href="index.html">
-                            <img src="./Resources/logo.jpg" alt="Logo">
-                        </a>
-                    </figure>
-                    <div class="columns is-flex is-vcentered"> 
-                        <div class="column is-two-thirds-mobile is-half-tablet">
+                <div class="navbar-start">
+                    <div class="navbar-brand is-vcentered">
+                        <figure class="image is-96x96">
                             <a href="index.html">
-                                <img style="max-width: 50vh; max-height: 5vw;" class="is-flex is-vcentered"  src="./Resources/name.png" alt="Logo">
+                                <img src="./Resources/logo.jpg" alt="Logo">
                             </a>
+                        </figure>
+                        <div class="columns is-flex is-vcentered"> 
+                            <div class="column is-two-thirds-mobile is-half-tablet">
+                                <a href="index.html">
+                                    <img style="max-width: 50vh; max-height: 5vw;" class="is-flex is-vcentered"  src="./Resources/name.png" alt="Logo">
+                                </a>
+                            </div>
                         </div>
+                        <!-- <h1 class="is-vcentered has-text-weight-semibold" style="font-family: 'Poppins', sans-serif;">The Clouds Playschool</h1> -->
                     </div>
-                    <!-- <h1 class="is-vcentered has-text-weight-semibold" style="font-family: 'Poppins', sans-serif;">The Clouds Playschool</h1> -->
                 </div>
+                
                 <div class="navbar-menu" id="navbarMenu">
                     <div class="navbar-end">
-                        <a class="navbar-item is-vcentered" href="index.html">
-                            <button class="button is-size-5 is-info is-light">
-                                    Home
-                            </button>
+                        <a href="index.html" class="navbar-item is-active is-size-5 has-text-weight-semibold">
+                            Home
                         </a>
                         <a href="about.html" class="navbar-item is-active is-size-5 has-text-weight-semibold">
                             About
@@ -78,52 +124,49 @@
                         <a href="contact.html" class="navbar-item is-size-5 has-text-weight-semibold">
                             Contact
                         </a>
-                        <a href="faq.html" class="navbar-item is-size-5 has-text-weight-semibold">
-                            FAQ
-                        </a>
                     </div>
                 </div>
             </div>
         </nav>
 
+
         <!-- Carousel -->
-        <div class="container">
-            <div id="carousel" class="carousel is-full" data-autoplay="true" data-loop="true">
-                <div class="item-1">
-                    <figure class="image is-3by2">
-                        <img src="./Resources/image-1.jpg" alt="">
-                    </figure>
-                </div>
-                <div class="item-2">
-                    <figure class="image is-3by2">
-                        <img src="./Resources/image-10.jpg" alt="">
-                    </figure>
-                </div>
-                <div class="item-3">
-                    <figure class="image is-3by2">
-                        <img src="./Resources/image-14.jpg" alt="">
-                    </figure>
-                </div>
-                <div class="item-4">
-                    <figure class="image is-3by2">
-                        <img src="./Resources/image-13.jpg" alt="">
-                    </figure>
-                </div>
-                <div class="item-5">
-                    <figure class="image is-3by2">
-                        <img src="./Resources/image-12.jpg" alt="">
-                    </figure>
-                </div>
-                <div class="item-6">
-                    <figure class="image is-3by2">
-                        <img src="./Resources/image-9.png" alt="">
-                    </figure>
-                </div>
+        <div id="carousel" class="carousel is-half" data-autoplay="true" data-loop="true">
+            <div class="carousel-item">
+                <figure class="carousel-item image is-3by2">
+                    <img src="./Resources/image-13.jpg" alt="">
+                </figure>
+            </div>
+            <div class="carousel-item">
+                <figure class="carousel-item image is-3by2">
+                    <img src="./Resources/image-10.jpg" alt="">
+                </figure>
+            </div>
+            <div class="carousel-item">
+                <figure class="carousel-item image is-3by2">
+                    <img src="./Resources/image-14.jpg" alt="">
+                </figure>
+            </div>
+            <div class="carousel-item">
+                <figure class="carousel-item image is-3by2">
+                    <img src="./Resources/image-13.jpg" alt="">
+                </figure>
+            </div>
+            <div class="carousel-item">
+                <figure class="carousel-item image is-3by2">
+                    <img src="./Resources/image-12.jpg" alt="">
+                </figure>
+            </div>
+            <div class="carousel-item">
+                <figure class="carousel-item image is-3by2">
+                    <img src="./Resources/image-9.png" alt="">
+                </figure>
             </div>
         </div>
 
+
         <!-- Introduction -->
-        <section class="section">
+        <section class="section bg-img img-2">
             <div class="container">
                 <div class="columns is-desktop is-vcentered">
                     <div class="column">
@@ -146,7 +189,7 @@
                     </div>
                     <div class="column">
                         <figure class="image is-3by2">
-                            <img src="./Resources/kids-1.png" alt="">
+                            <img src="./Resources/kids-4.png" alt="">
                         </figure>
                     </div>
                 </div><br>
@@ -178,57 +221,69 @@
             </div>
         </section>
 
-        <div class="is-divider"></div><br>
+        <!-- <div class="is-divider"></div><br> -->
 
-
-        <!-- Track -->
-        <section class="section">
-            <p class="title has-text-centered is-size-3 has-text-weight-semibold" style="font-family: 'Poppins', sans-serif;">
-                We make sure your child is well taken cared of
-            </p><br>
-            <div class="timeline is-centered">
-                <!-- <header class="timeline-header">
-                    <span class="tag is-medium is-info">Timeline</span>
-                </header> -->
-                <div class="timeline-item is-primary">
-                    <div class="timeline-marker is-primary is-image is-32x32"></div>
-                    <div class="timeline-content">
-                        <figure class="image is-128x128">
-                            <img src="./Resources/clipart-3.jpg">
-                        </figure>
-                        <p class="subtitle has-text-centered has-text-weight-semibold">Playgroup</p>
-                        <p class="heading has-text-centered">1.5 - 2.5 Years Old</p>
+        <section class="section bg-img img-3">
+            <!-- Timeline -->
+            <div class="container sub-section">
+                <!-- <p class="title has-text-centered is-size-3 has-text-weight-semibold" style="font-family: 'Poppins', sans-serif;"></p> -->
+                <div class="columns is-desktop is-vcentered">
+                    <div class="column">
+                        <div class="container is-vcentered">
+                            <div class="columns">
+                                <div class="column is-vcentered">
+                                    <p class="title has-text-centered is-size-3 has-text-weight-semibold" style="font-family: 'Poppins', sans-serif;">
+                                        The ideal place for children between <br><span class="has-text-success had-text-weight bold"> 1.5 to 6 years </span>
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
                     </div>
-                </div>
-                <div class="timeline-item is-warning">
-                    <div class="timeline-marker is-warning is-image is-32x32"></div>
-                    <div class="timeline-content">
-                        <figure class="image is-128x128">
-                            <img src="./Resources/clipart-1.png">
-                        </figure>
-                        <p class="subtitle has-text-centered has-text-weight-semibold">Nursery</p>
-                        <p class="heading has-text-centered">2.5 - 3.5 Years Old</p>
-                    </div>
-                </div>
-                <div class="timeline-item is-danger">
-                    <!-- <i class="fa fa-flag"></i> -->
-                    <div class="timeline-marker is-danger is-image is-32x32"></div>
-                    <div class="timeline-content">
-                        <figure class="image is-128x128">
-                            <img src="./Resources/clipart-4.png">
-                        </figure>
-                        <p class="subtitle has-text-centered has-text-weight-semibold">Kindergarten</p>
-                        <p class="heading has-text-centered">3.5 - 5.5 Years Old</p>
+                    <div class="column">
+                        <div class="timeline is-centered">
+                            <!-- <header class="timeline-header">
+                                <span class="tag is-medium is-info">Timeline</span>
+                            </header> -->
+                            <div class="timeline-item is-primary">
+                                <div class="timeline-marker is-primary is-image is-32x32"></div>
+                                <div class="timeline-content">
+                                    <figure class="image is-128x128">
+                                        <img src="./Resources/clipart-3.png">
+                                    </figure>
+                                    <p class="subtitle has-text-centered has-text-weight-semibold">Playgroup</p>
+                                    <p class="heading has-text-centered">1.5 - 2.5 Years Old</p>
+                                </div>
+                            </div>
+                            <div class="timeline-item is-warning">
+                                <div class="timeline-marker is-warning is-image is-32x32"></div>
+                                <div class="timeline-content">
+                                    <figure class="image is-128x128">
+                                        <img src="./Resources/clipart-1.png">
+                                    </figure>
+                                    <p class="subtitle has-text-centered has-text-weight-semibold">Nursery</p>
+                                    <p class="heading has-text-centered">2.5 - 3.5 Years Old</p>
+                                </div>
+                            </div>
+                            <div class="timeline-item is-danger">
+                                <!-- <i class="fa fa-flag"></i> -->
+                                <div class="timeline-marker is-danger is-image is-32x32"></div>
+                                <div class="timeline-content">
+                                    <figure class="image is-128x128">
+                                        <img src="./Resources/clipart-4.png">
+                                    </figure>
+                                    <p class="subtitle has-text-centered has-text-weight-semibold">Kindergarten</p>
+                                    <p class="heading has-text-centered">3.5 - 5.5 Years Old</p>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
+
             <div class="is-divider"></div><br>
-        </section>
 
-
-        <!-- Ammenities -->
-        <section class="section">
-            <div class="container">
+            <!-- Ammenities -->  
+            <div class="container sub-section">
                 <div class="columns is-desktop is-centered">
                     <div class="column">
                         <div class="content is-medium">
@@ -249,93 +304,101 @@
                                     <li><i class="fa fa-dropbox fa-2x"></i><p class="is-size-5 is-inline">&nbsp;&nbsp;&nbsp;Stationary Included</p></li>
                                 </ul>   
                             </div>
-                            <!-- <div class="column"></div> -->
                         </div>
                     </div>
                 </div>
-            </div><br><br><br>  
-            <div class="container">
+            </div><br><br><br><br>
+            <div class="container sub-section">
                 <div class="columns is-desktop is-centered">
                     <div class="column has-text-centered">
                         <figure class="image">
-                            <img src="./Resources/chipart-5.png">
+                            <img src="./Resources/kid-1.png">
                         </figure>
                     </div>
-                    <div class="column">    
-                        <div class="content is-medium">
-                            <!-- <h2 class="subtitle is-4">December 25, 2018</h2> -->
-                            <h1 class="title">We Care</h1>
-                            <p> We make sure that your child is well taken care of, and is learning by creating throughout his tenure. Our teachers make sure to focus on every individual child to develop their personality and creativity. </p>
-                            <p> With a standalone space, we provide plenty of playful activities for your child to have fun and socialize with other kids.</p>
+                    <div class="column">
+                        <div class="columns"><div class="column"></div></div>
+                        <div class="columns">
+                            <div class="content is-medium">
+                                <!-- <h2 class="subtitle is-4">December 25, 2018</h2> -->
+                                <h1 class="title">We Teach Values</h1>
+                                <p> We make sure that your child is well taken care of, and is learning by creating throughout his tenure. Our teachers make sure to focus on every individual child to develop their personality and creativity. </p>
+                                <p> With a standalone space, we provide plenty of playful activities for your child to have fun and socialize with other kids.</p>
+                            </div>
                         </div>
+                        <div class="columns"><div class="column"></div></div>
                     </div>
                 </div>
-            </div>
-        </section>
-
-        <div class="is-divider"></div>
+            </div><br><br><br>
 
 
-        <!-- Our Kids -->
-        <section class="section">
-            <div class="container">
+            <!-- Testimonials -->
+            <div class="container sub-section">
                 <div class="columns">
                     <div class="column">
-                        <div class="card hvr-grow">
-                            <div class="card-image">
-                            <figure class="image is-1by1">
-                                <img src="./Resources/image-8.jpg">
-                            </figure>
-                            </div>
-                            <div class="card-content">
-                                <div class="media">
-                                    <div class="media-content has-text-centered">
-                                        <p class="title is-4">Ritika</p>
-                                        <p class="subtitle is-6">Playgroup</p>
-                                    </div>
+                        <p class="subtitle has-text-centered is-size-2 has-text-weight-semibold" style="font-family: 'Poppins', sans-serif;">
+                            Your child will love the <span class="has-text-info">Clouds</span>
+                        </p>
+                    </div>
+                </div><br>
+                <div class="columns">
+                    <div class="columns">
+                        <div class="column">
+                            <div class="card hvr-grow">
+                                <div class="card-image">
+                                <figure class="image is-1by1">
+                                    <img src="./Resources/image-8.jpg">
+                                </figure>
                                 </div>
-                                <div class="content">
-                                    Ritika sometimes need a little help with the sand, and we're more than happy to help!
+                                <div class="card-content">
+                                    <div class="media">
+                                        <div class="media-content has-text-centered">
+                                            <p class="title is-4">Ritika</p>
+                                            <p class="subtitle is-6">Playgroup</p>
+                                        </div>
+                                    </div>
+                                    <div class="content">
+                                        Ritika sometimes need a little help with the sand, and we're more than happy to help!
+                                    </div>
                                 </div>
                             </div>
                         </div>
-                    </div>
-                    <div class="column">
-                        <div class="card hvr-grow">
-                            <div class="card-image">
-                            <figure class="image is-1by1">
-                                <img src="./Resources/image-9.png">
-                            </figure>
-                            </div>
-                            <div class="card-content">
-                                <div class="media">
-                                    <div class="media-content has-text-centered">
-                                        <p class="title is-4">Rohan</p>
-                                        <p class="subtitle is-6">Nursery</p>
-                                    </div>
+                        <div class="column">
+                            <div class="card hvr-grow">
+                                <div class="card-image">
+                                <figure class="image is-1by1">
+                                    <img src="./Resources/image-9.png">
+                                </figure>
                                 </div>
-                                <div class="content">
-                                    Rohan loves the color red, He definitely didn't got paint on the walls!
+                                <div class="card-content">
+                                    <div class="media">
+                                        <div class="media-content has-text-centered">
+                                            <p class="title is-4">Rohan</p>
+                                            <p class="subtitle is-6">Nursery</p>
+                                        </div>
+                                    </div>
+                                    <div class="content">
+                                        Rohan loves the color red, He definitely didn't got paint on the walls!
+                                    </div>
                                 </div>
                             </div>
                         </div>
-                    </div>
-                    <div class="column">
-                        <div class="card hvr-grow">
-                            <div class="card-image">
-                            <figure class="image is-1by1">
-                                <img src="./Resources/image-7.jpg">
-                            </figure>
-                            </div>
-                            <div class="card-content">
-                                <div class="media">
-                                    <div class="media-content has-text-centered">
-                                        <p class="title is-4">Ashish</p>
-                                        <p class="subtitle is-6">Kindergartener</p>
-                                    </div>
+                        <div class="column">
+                            <div class="card hvr-grow">
+                                <div class="card-image">
+                                <figure class="image is-1by1">
+                                    <img src="./Resources/image-7.jpg">
+                                </figure>
                                 </div>
-                                <div class="content">
-                                    Ashish loved the Sand-Pit Activit, He can't get enough of playing with his friend!
+                                <div class="card-content">
+                                    <div class="media">
+                                        <div class="media-content has-text-centered">
+                                            <p class="title is-4">Ashish</p>
+                                            <p class="subtitle is-6">Kindergartener</p>
+                                        </div>
+                                    </div>
+                                    <div class="content">
+                                        Ashish loved the Sand-Pit Activit, He can't get enough of playing with his friend!
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -344,10 +407,40 @@
             </div>
         </section>
 
-        
+
+        <!-- Hop On Board -->
+        <section class="section bg-img img-1">
+            <div class="container">
+                <div class="columns is-desktop is-centered">
+                    <div class="column">
+                        <div class="content is-medium">
+                            <!-- <h2 class="subtitle is-4">December 25, 2018</h2> -->
+                            <h1 class="title">Ready To Hop on-board?</h1>
+                            <p> We cannot wait for your child to join our nurturing environment, and make our school more vibrant. We're always open to admissions and any admission
+                                related inquiry can directly be addressed by visiting our site or contacting us at your convenience during school hours. From Playgroup to Kindergarten, 
+                                we teach your child the fundamentals of education, expose them in a plethora of fun activities and raise them with a sense of commmunity and empathy.</p>
+                        </div><br>
+                        <div class="columns is-desktop is-centered">
+                            <div class="column"></div>
+                            <div class="column">
+                                <!-- <button class="button is-warning"></button> -->
+                                <a href="contact.html"><button class="button is-success is-outlined">Contact Now!</button></a>
+                            </div>
+                            <div class="column"></div>
+                        </div>
+                    </div>
+                    <div class="column has-text-centered">
+                        <figure class="image">
+                            <img src="./Resources/kids-3.png">
+                        </figure>
+                    </div>
+                </div>
+            </div>
+        </section>
+
 
         <!-- Newsletter -->
-        <section class="section">
+        <!-- <section class="section">
             <div class="columns">
                 <div class="column is-10 is-offset-1">
                 <div class="container has-text-centered is-fluid">
@@ -371,45 +464,41 @@
                 </div>
                 </div>
             </div>
-        </section>
+        </section> -->
 
-        <!-- Articles -->
-        <section class="section">
-            <div class="container">
-                <div class="columns is-desktop is-centered">
-                    <div class="column">    
-                        <div class="content is-medium">
-                            <!-- <h2 class="subtitle is-4">December 25, 2018</h2> -->
-                            <h1 class="title">Ready To Hop On-board?</h1>
-                            <p> We cannot wait for your child to join our nurturing environment, and make our school more vibrant. We're always open to admissions and any admission
-                                related inquiry can directly be addressed by visiting our site or contacting us at your convenience during school hours.</p>
-                        </div><br>
-                        <div class="columns is-desktop is-centered">
-                            <div class="column"></div>
-                            <div class="column">
-                                <!-- <button class="button is-warning"></button> -->
-                                <a href="contact.html"><button class="button is-success is-outlined">Contact Now!</button></a>
-                            </div>
-                            <div class="column"></div>
-                        </div>
-                    </div>
-                    <div class="column has-text-centered">
-                        <figure class="image">
-                            <img src="./Resources/chipart-5.png">
-                        </figure>
-                    </div>
-                </div>
-            </div>
-        </section>
 
         <!-- Footer -->
         <footer class="footer">
-            <div class="content has-text-centered">
-                <p>
-                    <strong>Bulma</strong> by <a href="https://jgthms.com">Jeremy Thomas</a>. The source code is licensed
-                    <a href="http://opensource.org/licenses/mit-license.php">MIT</a>. The website content
-                    is licensed <a href="http://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY NC SA 4.0</a>.
-                </p>
+            <div class="columns is-mobile is-centered">
+                <div class="column is-half">
+                    <div class="columns is-vcentered    ">
+                        <div class="column is-four-fifths has-text-centered ">
+                            <strong>The Clouds Playschool</strong> is a unit of <strong>SRL Group</strong>. All Rights Reserved.
+                        </div>
+                        <div class="column"></div>
+                        <div class="column">
+                            <span class="icon is-right">
+                                <a href="https://www.facebook.com/thecloudsplayschool/" title="Facebook"><i class="fa fa-facebook fa-2x"></i></a>
+                            </span><br>
+                            <span class="icon is-right">
+                                <a href="https://www.instagram.com/thecloudsplayschool/" title="Instagram"><i class="fa fa-instagram fa-2x"></i></a>
+                            </span><br>
+                            <span class="icon is-right">
+                                <a href="about.html" title="Mobile"> <i class="fa fa-phone fa-2x"></i></a>
+                            </span><br>
+                            <span class="icon is-right">
+                                <a href="about.html" title="Address"><i class="fa fa-map-marker fa-2x"></i></a>
+                            </span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="columns">
+                <div class="column is-centered has-text-centered">
+                    <p class="has-text-centered is-size-6 " style="font-family: 'Poppins', sans-serif;">
+                        made with ♥ by yash
+                    </p>
+                </div>
             </div>
         </footer>
 
@@ -421,11 +510,21 @@
                 slidesToShow: 4
             });
 
-            $(document).ready(function(){
-                var carousels = bulmaCarousel.attach(); // carousels now contains an array of all Carousel instances
+            $(document).ready(function() {
+                $('body,html').animate({scrollTop: 156}, 1700); 
                 // ScrollReveal().reveal('.section')
+
+                window.sr = ScrollReveal({ reset: true });
+
+                sr.reveal('.section .sub-section', { duration: 2000 });
+                sr.reveal('.sub-section', { duration: 2000 });
+
+                sr.reveal('.foo-2', { 
+                    origin: 'right', 
+                    duration: 2000 
+                });
             });
-            </script>
+        </script>
     </body>
 </html>
 
